@@ -92,7 +92,7 @@ for drop_sector in share_cols:
         return elasticities
 
 
-    elasticities = compute_elasticities(results, share_cols, exog_vars, df, drop_sector)
+    elasticities = compute_elasticities(results, share_cols, price_cols, df, drop_sector)
 
     # Save elasticities
     elasticities_file = os.path.join(output_dir, f"elasticities_dropped_{drop_sector}.csv")

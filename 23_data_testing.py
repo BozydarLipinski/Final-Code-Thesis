@@ -76,41 +76,46 @@ exog_vars = ['portfolio_value_ln']  # Add other fixed exogenous variables here i
 # Merge return columns into exog_vars
 exog_vars += return_cols
 
-# Run all tests
-print("=== Durbin-Watson Tests ===")
+# Run all tests and collect results
+all_results = []
+
+# Durbin-Watson Tests
 dw_results = run_durbin_watson(weight_cols)
-print(dw_results)
+dw_results['Test'] = 'Durbin-Watson'
+all_results.append(dw_results)
 
-print("\n=== ADF Stationarity Tests ===")
+# ADF Tests for weights
 adf_results = run_adf_tests(weight_cols)
-print(adf_results)
+adf_results['Test'] = 'ADF (Weights)'
+all_results.append(adf_results)
 
+# ADF Tests for explanatory variables
+adf_results2 = run_adf_tests(exog_vars)
+adf_results2['Test'] = 'ADF (Explanatory Variables)'
+all_results.append(adf_results2)
 
-print("\n=== ADF Stationarity Tests ===")
-adf_results2 = run_adf_tests(data[exog_vars])
-print(adf_results2)
-
-print("\n=== VIF Multicollinearity Tests ===")
+# VIF Tests
 vif_results = calculate_vif(data[exog_vars])
-print(vif_results)
+vif_results = vif_results.set_index('Variable')
+vif_results['Test'] = 'VIF'
+all_results.append(vif_results)
 
-
-
-# Create a new version of X excluding Industrials_lr
-X_excl_industrials = data[exog_vars].drop(columns=["Industrials_lr"])
-
-
-print("\n=== VIF Multicollinearity Tests ===")
-vif_results2 = calculate_vif(X_excl_industrials)
-print(vif_results2)
-
-print("\n=== Breusch-Pagan Heteroskedasticity Tests ===")
+# Breusch-Pagan Tests
 bp_results = run_breusch_pagan(weight_cols, exog_vars)
-print(bp_results)
+bp_results['Test'] = 'Breusch-Pagan'
+all_results.append(bp_results)
 
-# Save results to Excel
-# with pd.ExcelWriter('diagnostic_tests_results.xlsx') as writer:
-#     dw_results.to_excel(writer, sheet_name='Durbin_Watson')
-#     adf_results.to_excel(writer, sheet_name='ADF_Stationarity')
-#     vif_results.to_excel(writer, sheet_name='VIF_Multicollinearity')
-#     bp_results.to_excel(writer, sheet_name='Breusch_Pagan')
+# Combine all results
+final_results = pd.concat(all_results)
+
+# Add a column for the variable name (index becomes a column)
+final_results = final_results.reset_index().rename(columns={'index': 'Variable'})
+
+# Reorder columns to have Test and Variable first
+cols = ['Test', 'Variable'] + [col for col in final_results.columns if col not in ['Test', 'Variable']]
+final_results = final_results[cols]
+
+# Save to CSV
+final_results.to_csv('all_diagnostic_tests.csv', index=False)
+
+print("All tests combined and saved to 'all_diagnostic_tests.csv'")

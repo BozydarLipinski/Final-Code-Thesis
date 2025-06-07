@@ -1,0 +1,58 @@
+Test,Variable,Durbin-Watson,Interpretation,ADF Statistic,p-value,Critical Values,Stationary,VIF,LM Statistic,Heteroskedasticity
+Durbin-Watson,Basic Materials_w,0.084716014704389,Positive autocorrelation,,,,,,,
+Durbin-Watson,Communication Services_w,0.022633240158237998,Positive autocorrelation,,,,,,,
+Durbin-Watson,Consumer Cyclical_w,0.02906602371684555,Positive autocorrelation,,,,,,,
+Durbin-Watson,Consumer Defensive_w,0.006775680055022747,Positive autocorrelation,,,,,,,
+Durbin-Watson,Energy_w,0.09987937576479991,Positive autocorrelation,,,,,,,
+Durbin-Watson,Financial Services_w,0.0056795124467737676,Positive autocorrelation,,,,,,,
+Durbin-Watson,Healthcare_w,0.0572425062670324,Positive autocorrelation,,,,,,,
+Durbin-Watson,Industrials_w,0.08067997513499896,Positive autocorrelation,,,,,,,
+Durbin-Watson,Real Estate_w,0.2917895616472057,Positive autocorrelation,,,,,,,
+Durbin-Watson,Technology_w,0.019645521935490254,Positive autocorrelation,,,,,,,
+Durbin-Watson,Utilities_w,0.5756370503778473,Positive autocorrelation,,,,,,,
+ADF (Weights),Basic Materials_w,,,-2.223350841320158,0.19787985846790468,"{'1%': np.float64(-3.505190196159122), '5%': np.float64(-2.894232085048011), '10%': np.float64(-2.5842101234567902)}",False,,,
+ADF (Weights),Communication Services_w,,,-1.9322661776818275,0.3170375933826678,"{'1%': np.float64(-3.506057133647011), '5%': np.float64(-2.8946066061911946), '10%': np.float64(-2.5844100201994697)}",False,,,
+ADF (Weights),Consumer Cyclical_w,,,-1.6479620708375873,0.4581034808751609,"{'1%': np.float64(-3.505190196159122), '5%': np.float64(-2.894232085048011), '10%': np.float64(-2.5842101234567902)}",False,,,
+ADF (Weights),Consumer Defensive_w,,,-1.329116285118529,0.615748568967276,"{'1%': np.float64(-3.505190196159122), '5%': np.float64(-2.894232085048011), '10%': np.float64(-2.5842101234567902)}",False,,,
+ADF (Weights),Energy_w,,,-1.8007856722095397,0.3800716989875175,"{'1%': np.float64(-3.505190196159122), '5%': np.float64(-2.894232085048011), '10%': np.float64(-2.5842101234567902)}",False,,,
+ADF (Weights),Financial Services_w,,,-1.9980443622222228,0.28743123597663506,"{'1%': np.float64(-3.5078527246648834), '5%': np.float64(-2.895382030636155), '10%': np.float64(-2.584823877658872)}",False,,,
+ADF (Weights),Healthcare_w,,,-3.270467170652756,0.016251321415877484,"{'1%': np.float64(-3.5087828609430614), '5%': np.float64(-2.895783561573195), '10%': np.float64(-2.5850381719848565)}",True,,,
+ADF (Weights),Industrials_w,,,-2.0863789546807503,0.25002684747603454,"{'1%': np.float64(-3.505190196159122), '5%': np.float64(-2.894232085048011), '10%': np.float64(-2.5842101234567902)}",False,,,
+ADF (Weights),Real Estate_w,,,-2.189675166887181,0.2100140943265048,"{'1%': np.float64(-3.506944401824286), '5%': np.float64(-2.894989819214876), '10%': np.float64(-2.584614550619835)}",False,,,
+ADF (Weights),Technology_w,,,-1.2404964186453065,0.6559372117710898,"{'1%': np.float64(-3.506057133647011), '5%': np.float64(-2.8946066061911946), '10%': np.float64(-2.5844100201994697)}",False,,,
+ADF (Weights),Utilities_w,,,-3.993221915722153,0.0014464221284051857,"{'1%': np.float64(-3.505190196159122), '5%': np.float64(-2.894232085048011), '10%': np.float64(-2.5842101234567902)}",True,,,
+ADF (Explanatory Variables),portfolio_value_ln,,,-0.8875025358564205,0.7920601470182038,"{'1%': np.float64(-3.505190196159122), '5%': np.float64(-2.894232085048011), '10%': np.float64(-2.5842101234567902)}",False,,,
+ADF (Explanatory Variables),Basic Materials_lr,,,-5.1784105083526395,9.7296501877337e-06,"{'1%': np.float64(-3.5117123057187376), '5%': np.float64(-2.8970475206326833), '10%': np.float64(-2.5857126912469153)}",True,,,
+ADF (Explanatory Variables),Communication Services_lr,,,-5.11884557653149,1.2845974034628849e-05,"{'1%': np.float64(-3.5078527246648834), '5%': np.float64(-2.895382030636155), '10%': np.float64(-2.584823877658872)}",True,,,
+ADF (Explanatory Variables),Consumer Cyclical_lr,,,-4.520517164526412,0.00018051858216394336,"{'1%': np.float64(-3.510711795769895), '5%': np.float64(-2.8966159448223734), '10%': np.float64(-2.5854823866213152)}",True,,,
+ADF (Explanatory Variables),Consumer Defensive_lr,,,-4.527164608159652,0.0001755709246091427,"{'1%': np.float64(-3.5087828609430614), '5%': np.float64(-2.895783561573195), '10%': np.float64(-2.5850381719848565)}",True,,,
+ADF (Explanatory Variables),Energy_lr,,,-10.998469785809936,6.776411763195355e-20,"{'1%': np.float64(-3.505190196159122), '5%': np.float64(-2.894232085048011), '10%': np.float64(-2.5842101234567902)}",True,,,
+ADF (Explanatory Variables),Financial Services_lr,,,-8.444643631751857,1.7259382963369569e-13,"{'1%': np.float64(-3.505190196159122), '5%': np.float64(-2.894232085048011), '10%': np.float64(-2.5842101234567902)}",True,,,
+ADF (Explanatory Variables),Healthcare_lr,,,-11.839754669264437,7.639087333669086e-22,"{'1%': np.float64(-3.505190196159122), '5%': np.float64(-2.894232085048011), '10%': np.float64(-2.5842101234567902)}",True,,,
+ADF (Explanatory Variables),Industrials_lr,,,-4.668805509804658,9.627149265173608e-05,"{'1%': np.float64(-3.5097356063504983), '5%': np.float64(-2.8961947486260944), '10%': np.float64(-2.5852576124567475)}",True,,,
+ADF (Explanatory Variables),Real Estate_lr,,,-7.296971883252608,1.3698707279952117e-10,"{'1%': np.float64(-3.506057133647011), '5%': np.float64(-2.8946066061911946), '10%': np.float64(-2.5844100201994697)}",True,,,
+ADF (Explanatory Variables),Technology_lr,,,-9.465897687047734,4.231122314913625e-16,"{'1%': np.float64(-3.505190196159122), '5%': np.float64(-2.894232085048011), '10%': np.float64(-2.5842101234567902)}",True,,,
+ADF (Explanatory Variables),Utilities_lr,,,-9.409105281347106,5.900973800385716e-16,"{'1%': np.float64(-3.505190196159122), '5%': np.float64(-2.894232085048011), '10%': np.float64(-2.5842101234567902)}",True,,,
+VIF,portfolio_value_ln,,,,,,,1.1972112174949396,,
+VIF,Basic Materials_lr,,,,,,,5.71821660404208,,
+VIF,Communication Services_lr,,,,,,,2.5695324013548433,,
+VIF,Consumer Cyclical_lr,,,,,,,5.625174997238781,,
+VIF,Consumer Defensive_lr,,,,,,,4.814779362997141,,
+VIF,Energy_lr,,,,,,,2.4311071427484294,,
+VIF,Financial Services_lr,,,,,,,6.350445621758332,,
+VIF,Healthcare_lr,,,,,,,3.2168944246664943,,
+VIF,Industrials_lr,,,,,,,12.907931259033893,,
+VIF,Real Estate_lr,,,,,,,3.7867595466673607,,
+VIF,Technology_lr,,,,,,,5.502997402940994,,
+VIF,Utilities_lr,,,,,,,2.444254204620477,,
+Breusch-Pagan,Basic Materials_w,,,,0.2807891580077536,,,,14.319228454486064,False
+Breusch-Pagan,Communication Services_w,,,,0.6624007894119903,,,,9.469393040035426,False
+Breusch-Pagan,Consumer Cyclical_w,,,,0.003921918643131371,,,,29.01344590437716,True
+Breusch-Pagan,Consumer Defensive_w,,,,0.9871803801903556,,,,3.7738285765531705,False
+Breusch-Pagan,Energy_w,,,,0.003824420799022978,,,,29.0870287777374,True
+Breusch-Pagan,Financial Services_w,,,,0.09866923502977902,,,,18.599265792993563,False
+Breusch-Pagan,Healthcare_w,,,,0.0016470360331474144,,,,31.508442570312404,True
+Breusch-Pagan,Industrials_w,,,,0.017745786309541222,,,,24.4338273675552,True
+Breusch-Pagan,Real Estate_w,,,,0.0579725419403317,,,,20.513630290010507,False
+Breusch-Pagan,Technology_w,,,,0.22384626461115595,,,,15.330727286816476,False
+Breusch-Pagan,Utilities_w,,,,0.028225913489388518,,,,22.94159275077704,True
